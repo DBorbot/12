@@ -62,13 +62,13 @@
 // console.log(decr--);     /* 10 */
 
 
-cosole.log(5 % 2);       /* 1 */
-console.log(2 * 4 == 8);     /* true */
-console.log(2 * 4 == "8");    /* true */
-console.log(2 * 4 === "8");   /* false */
-console.log(2 * 4 === 8);     /* true */
+// cosole.log(5 % 2);       /* 1 */
+// console.log(2 * 4 == 8);     /* true */
+// console.log(2 * 4 == "8");    /* true */
+// console.log(2 * 4 === "8");   /* false */
+// console.log(2 * 4 === 8);     /* true */
 
-let biedronka = true
-lidl = false;
-console.log(biedronka && lidl);
+// let biedronka = true
+// lidl = false;
+// console.log(biedronka && lidl);
 

@@ -1,0 +1,1 @@
+const logical = prompt("Это Дима?", "");

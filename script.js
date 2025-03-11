@@ -41,21 +41,16 @@
 // };
 // console.log(isEven(1011));
 
-function countBs(b, a, c) {
+// function countBs(b, a) {
 
-    if (a == a)
-        return console.log(b.charAt(a))
-    else if (b == b)
-        return console.log(b.length)
-    else
-        return "Error!!!";
+//     if (b == b && a < (b.length))
+//         return console.log(b.charAt(a), (b.length))
+//     else
+//         return "Нет такой буквы!!!"
 
 
-
-
-
-};
-console.log(countBs("tuqewtuuiyrqrqouroiuoqu", 5));
+// };
+// console.log(countBs("tuqewtuuiyrqrqou", 15));
 
 // let charAt = [1, 2, 3, 4,];
 // console.log(charAt.length - 1);
@@ -108,11 +103,192 @@ console.log(countBs("tuqewtuuiyrqrqouroiuoqu", 5));
 //         break;
 // }
 
-// const hamburger = true;
-// const fries = true;
+// const hamburger = 5;
+// const fries = null;
 
 // if (hamburger && fries) {
 //     console.log("i'm done")
 // };
+
+
+
+// const hamburger = 3;
+// const fries = 1;
+// const cola = 0;
+
+// console.log(hamburger === 3 && cola && fries);
+
+// console.log(1 && 0);
+// console.log(1 && 5);
+// console.log(null && 5);
+// console.log(0 && "uriwhihrgihr");
+
+// if (hamburger === 3&& cola === 1 && fries) {
+//     console.log("i'm done")
+// } else {
+//     console.log("Мы уходим!!!");
+// };
+
+
+// const hamburger = 3;
+// const fries = 3;
+// const cola = 0;
+// const nuggets = 4;
+
+// if (hamburger === 3 && (cola === 2 || fries) === 3 && nuggets) {
+//     console.log("i'm done")
+// } else {
+//     console.log("Мы уходим!!!");
+// };
+// console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+
+
+// let johnReport, alexReport, samReport, mariaReport = 'Done!'
+// console.log(johnReport, alexReport, samReport, mariaReport);
+
+// console.log(!0);
+
+// console.log(NaN || 2 || undefined); //2
+// console.log(NaN && 2 && undefined); //NaN
+// console.log(1 && 2 && 3); //3
+// console.log(!1 && 2 || !3); //!3   false
+// console.log(25 || null && !3); //25
+// console.log(NaN || null || !3 || undefined || 5); // undefined 5
+// console.log(NaN || null && !3 && undefined || 5); //5
+// console.log(5 === 5 && 3 > 1 || 5); //5 true
+
+// const hamburger = 3,
+//     fries = 3,
+//     cola = 0,
+//     nuggets = 2;
+
+// if (hamburger === 3 && cola || fries === 3 && nuggets) {
+//     console.log('Done!')
+// }; // Done!
+
+
+// let hamburger;
+// const fries = NaN,
+//     cola = 0,
+//     nuggets = 2;
+
+// if (hamburger || cola || fries === 3 || nuggets) {
+//     console.log('Done!');
+// }; // Done!
+
+// let num = 50;
+
+// while (num <= 55) {
+//     console.log(num);
+//     num++;
+// };
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num <= 55);
+
+// for (let i = 1; i < 10; i++) {
+
+//     if (i === 6) {
+//         // break
+//         continue;
+//     }
+//     console.log(i);
+
+// }
+
+// for (let i = 0; i < 3; i++) {
+//     console.log(i);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(j);
+//     }
+
+// }
+
+// let result = '';
+// const length = 7;
+// for (let i = 1; i < length; i++) {
+//     for (let j = 0; j < i; j++) {
+//         result += '*';
+//     }
+//     result += '\n';
+// }
+
+// console.log(result);
+
+// "use strict"
+
+// first: for (let i = 0; i < 3; i++) {
+//     console.log(`First level: ${i}`);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(`Sekond level: ${j}`);
+//         for (let k = 0; k < 3; k++) {
+//             if (k == 2) continue first;
+//             console.log(`Third level: ${k}`);
+//         }
+//     }
+// }
+
+
+
+// first: for (let i = 0; i < 3; i++) {
+//     console.log(`First level ${i}`);
+//     for (let j = 0; j < 3; j++) {
+//         console.log(`Sekond level: ${j}`);
+//         for (let k = 0; k < 3; k++) {
+//             if (k === 2) break first;
+//             console.log(`Third: ${k}`);
+//         }
+//     }
+// }
+
+// let i = 5;
+// while (i <= 10) {
+//     console.log(i);
+//     i++;
+// }
+
+// for (let i = 20; i >= 10; i--) {
+//     console.log(i);
+//     if (i == 13) break;
+// }
+
+for (let i = 2; i <= 10; i++) {
+    if (i % 2 === 1) continue;
+    console.log(i);
+}
+
+let i = 2;
+while (i < 16) {
+    if (i % 2 === 0) {
+        i++;
+        console.log(i);
+        continue;
+    } else {
+        i++;
+        continue;
+    }
+}
+
+const arrayOfNumbers = [];
+for (i = 5; i <= 10; i++) {
+    arrayOfNumbers[i - 5] = i;
+
+}
+console.log(arrayOfNumbers);
+
+
+
+
+
+
+
+
+
+
+
+
 
 

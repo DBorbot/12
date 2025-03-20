@@ -713,6 +713,21 @@ let personalMovieDB = {
     privat: false
 };
 
+function showMyDB() {
+    if (personalMovieDB.privat == false) {
+        console.log(personalMovieDB);
+    }
+}
+showMyDB();
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        let a = prompt('Ваш любимый жанр под номером ' + i, '');
+        personalMovieDB.genres[i - 1] = a;
+    }
+
+}
+writeYourGenres();
+
 
 function rememberMyFilms() {
 
@@ -742,7 +757,7 @@ function detectPersonalLevel() {
     } else if (personalMovieDB.count === 0 || null) {
         alert('Произошла ошибка');
     }
-    
+
 }
 detectPersonalLevel();
 

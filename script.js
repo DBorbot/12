@@ -692,39 +692,69 @@
 // }
 // console.log(result);
 // console.log('\u{1F450}');
-// let numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
-// let personalMovieDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false
-// };
-
-// for (let i = 0; i < 2; i++) {
-//     let a = prompt('Один из последних просмотренных фильмов', ''),
-//         b = +prompt('На сколько оцените его?', '');
-
-//     if (a !== 0 && a !== null && a !== '' && a.length <= 50 && b !== 0 && b !== null && b !== '') {
-//         personalMovieDB.movies[a] = b;
-
-//     } else {
-//         i--;
-//     }
-
-// }
-// if (personalMovieDB.count <= 10) {
-//     alert('Просмотренно довольно мало фильмов');
-// } else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
-//     alert('Вы классический зритель');
-// } else if (personalMovieDB.count > 30) {
-//     alert('Вы киноман');
-// } else if (personalMovieDB.count === 0 || null) {
-//     alert('Произошла ошибка');
-// }
 
 
-// console.log(personalMovieDB);
+
+let numberOfFilms;
+
+function start() {
+    numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
+    }
+}
+start();
+
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
+
+
+function rememberMyFilms() {
+
+    for (let i = 0; i < 2; i++) {
+        let a = prompt('Один из последних просмотренных фильмов', ''),
+            b = +prompt('На сколько оцените его?', '');
+
+        if (a !== 0 && a !== null && a !== '' && a.length <= 50 && b !== 0 && b !== null && b !== '') {
+            personalMovieDB.movies[a] = b;
+
+        } else {
+            i--;
+        }
+    }
+
+}
+rememberMyFilms();
+
+function detectPersonalLevel() {
+
+    if (personalMovieDB.count <= 10) {
+        alert('Просмотренно довольно мало фильмов');
+    } else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
+        alert('Вы классический зритель');
+    } else if (personalMovieDB.count > 30) {
+        alert('Вы киноман');
+    } else if (personalMovieDB.count === 0 || null) {
+        alert('Произошла ошибка');
+    }
+    
+}
+detectPersonalLevel();
+
+
+console.log(personalMovieDB);
+
+
+
+
+
+
+
 // const usdCurr = 28;
 // // const eurCurr = 32;
 // const discount = 0.9
@@ -781,19 +811,64 @@
 // console.log('DIMA BORBOT'.toLowerCase());
 
 
-let str = 'Dima Borbot';
-let target = 'b';
-let pos = 0;
-while (true) {
-    let foundPos = str.indexOf(target, pos);
-    if (foundPos == -1) {
-        console.log('error');
-        break;    
-    } else {
-        console.log(`Найдено здесь: ${foundPos}`);
-    }
-    pos = foundPos + 1;
-}
+// let str = 'Dima Borbot';
+// let target = 'b';
+// let pos = 0;
+// while (true) {
+//     let foundPos = str.indexOf(target, pos);
+//     if (foundPos == -1) {
+//         console.log('error');
+//         break;
+//     } else {
+//         console.log(`Найдено здесь: ${foundPos}`);
+//     }
+//     pos = foundPos + 1;
+// }
+
+// let str = 'Dima Borbot';
+// let target = 'o';
+// let pos = -1;
+// while ((pos = str.indexOf(target, pos + 1)) != -1) {
+//     console.log(pos);
+// }
+
+// function ucFirst(str) {
+//     return str = (str[0].toUpperCase() + str.slice(1, ));
+// }
+
+// console.log(ucFirst('dima'));
 
 
 
+// function checkSpam(str) {
+//    str = str.toUpperCase();
+//     return str.includes('VIAGRA') || str.includes('XXX')
+// }
+// console.log(checkSpam('buy Viagra now'));
+
+// const str = 'test';
+// // const arr = [1, 2, 3]
+// console.log(str);
+
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+
+// let fruit = 'Some fruit';
+// console.log(fruit.indexOf('q'));
+
+// const logg = 'Hello world';
+// // console.log(logg.slice(6));
+// // console.log(logg.slice(-5));
+
+// // console.log(logg.substring(6, 11));
+// console.log(logg.substr(1, 7));
+
+
+// const num = 12.2;
+// console.log(Math.round(num));
+
+
+// const test = '12.2px';
+// console.log(parseInt(test));
+
+// console.log(typeof(parseFloat (test)));

@@ -895,7 +895,7 @@
 //     if (num <= 0 || (typeof (num)) === 'string' || `${num}`.includes('.') === true ) {
 //         return 'При вычислениях произошла ошибка';
 //     } else {
-        
+
 //         return `Объем куба: ${num * num * num}, площадь всей поверхности: ${6 * (num * num)}`;
 //     }
 
@@ -930,7 +930,40 @@
 //     } else if (Math.floor(minutes / 60) >= 5 && Math.floor(minutes / 60) <= 20) {
 //         let target = '';
 //         return target += `Это ${Math.floor(minutes / 60)} часов и ${minutes - (Math.floor(minutes / 60) * 60)} минут`;
-//     } 
-//     } 
+//     }
+//     }
 
 // console.log(getTimeFromMinutes(-15));
+
+// let text = 'test: 1, 2, 3';
+// // let pattern = /\d+/g;
+// console.log(text.match(/\d+/g));
+
+// function findMaxNumber(a, b, c, d) {
+
+//     if (typeof (a) != 'number' ||
+//         typeof (b) != 'number' ||
+//         typeof (c) != 'number' ||
+//         typeof(d) != 'number') {
+//         return 0;
+//     } else {
+
+//         return Math.max(a, b, c, d);
+//     }
+// }
+// console.log(findMaxNumber(1, 2, 3));
+
+function fib(number) {
+    let target = '';
+    if (typeof (number) != 'number') {
+        return `8`
+    }
+    for (let i = 0; i < number; i++) {
+
+        target += ' ' + `${i}`;
+
+    }
+
+    return target;
+}
+console.log(fib(4));

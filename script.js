@@ -695,74 +695,74 @@
 
 
 
-let numberOfFilms;
+// let numberOfFilms;
 
-function start() {
-    numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
-    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
-        numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
-    }
-}
-start();
+// function start() {
+//     numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
+//     while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+//         numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
+//     }
+// }
+// start();
 
-let personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// let personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: true
+// };
 
-function showMyDB() {
-    if (personalMovieDB.privat == false) {
-        console.log(personalMovieDB);
-    }
-}
-showMyDB();
-function writeYourGenres() {
-    for (let i = 1; i <= 3; i++) {
-        let a = prompt('Ваш любимый жанр под номером ' + i, '');
-        personalMovieDB.genres[i - 1] = a;
-    }
+// function showMyDB() {
+//     if (personalMovieDB.privat == false) {
+//         console.log(personalMovieDB);
+//     }
+// }
+// showMyDB();
+// function writeYourGenres() {
+//     for (let i = 1; i <= 3; i++) {
+//         let a = prompt('Ваш любимый жанр под номером ' + i, '');
+//         personalMovieDB.genres[i - 1] = a;
+//     }
 
-}
-writeYourGenres();
-
-
-function rememberMyFilms() {
-
-    for (let i = 0; i < 2; i++) {
-        let a = prompt('Один из последних просмотренных фильмов', ''),
-            b = +prompt('На сколько оцените его?', '');
-
-        if (a !== 0 && a !== null && a !== '' && a.length <= 50 && b !== 0 && b !== null && b !== '') {
-            personalMovieDB.movies[a] = b;
-
-        } else {
-            i--;
-        }
-    }
-
-}
-rememberMyFilms();
-
-function detectPersonalLevel() {
-
-    if (personalMovieDB.count <= 10) {
-        alert('Просмотренно довольно мало фильмов');
-    } else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
-        alert('Вы классический зритель');
-    } else if (personalMovieDB.count > 30) {
-        alert('Вы киноман');
-    } else if (personalMovieDB.count === 0 || null) {
-        alert('Произошла ошибка');
-    }
-
-}
-detectPersonalLevel();
+// }
+// writeYourGenres();
 
 
-console.log(personalMovieDB);
+// function rememberMyFilms() {
+
+//     for (let i = 0; i < 2; i++) {
+//         let a = prompt('Один из последних просмотренных фильмов', ''),
+//             b = +prompt('На сколько оцените его?', '');
+
+//         if (a !== 0 && a !== null && a !== '' && a.length <= 50 && b !== 0 && b !== null && b !== '') {
+//             personalMovieDB.movies[a] = b;
+
+//         } else {
+//             i--;
+//         }
+//     }
+
+// }
+// rememberMyFilms();
+
+// function detectPersonalLevel() {
+
+//     if (personalMovieDB.count <= 10) {
+//         alert('Просмотренно довольно мало фильмов');
+//     } else if (personalMovieDB.count > 10 && personalMovieDB.count <= 30) {
+//         alert('Вы классический зритель');
+//     } else if (personalMovieDB.count > 30) {
+//         alert('Вы киноман');
+//     } else if (personalMovieDB.count === 0 || null) {
+//         alert('Произошла ошибка');
+//     }
+
+// }
+// detectPersonalLevel();
+
+
+// console.log(personalMovieDB);
 
 
 
@@ -887,3 +887,50 @@ console.log(personalMovieDB);
 // console.log(parseInt(test));
 
 // console.log(typeof(parseFloat (test)));
+
+
+
+
+// function calculateVolumeAndArea(num) {
+//     if (num <= 0 || (typeof (num)) === 'string' || `${num}`.includes('.') === true ) {
+//         return 'При вычислениях произошла ошибка';
+//     } else {
+        
+//         return `Объем куба: ${num * num * num}, площадь всей поверхности: ${6 * (num * num)}`;
+//     }
+
+// }
+// console.log(calculateVolumeAndArea(7.2));
+
+// function getCoupeNumber(num) {
+//     if (num <= 0 || (typeof (num)) !== 'number' || `${num}`.includes('.') == true) {
+//         return 'Ошибка. Проверьте правильность введенного номера.';
+//     } else if (num > 36) {
+//         return 'Таких мест в вагоне не существует.';
+//     } else {
+//         return Math.ceil(num / 4);
+//         }
+// }
+
+
+// console.log(getCoupeNumber(19));
+
+
+// function getTimeFromMinutes(minutes) {
+//     if (minutes < 0 || `${minutes}`.includes('.') == true) {
+//         return "Ошибка, проверьте данные"
+//     } else if (minutes / 60 < 1) {
+//         return `Это 0 часов и ${minutes} минут`;
+//     } else if (Math.floor(minutes / 60) == 1) {
+//         let target = '';
+//         return target += `Это ${Math.floor(minutes / 60)} час и ${minutes - (Math.floor(minutes / 60) * 60)} минут`;
+//     } else if (Math.floor(minutes / 60) >= 2 && Math.floor(minutes / 60) <= 4) {
+//         let target = '';
+//         return target += `Это ${Math.floor(minutes / 60)} часа и ${minutes - (Math.floor(minutes / 60) * 60)} минут`;
+//     } else if (Math.floor(minutes / 60) >= 5 && Math.floor(minutes / 60) <= 20) {
+//         let target = '';
+//         return target += `Это ${Math.floor(minutes / 60)} часов и ${minutes - (Math.floor(minutes / 60) * 60)} минут`;
+//     } 
+//     } 
+
+// console.log(getTimeFromMinutes(-15));

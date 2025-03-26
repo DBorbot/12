@@ -336,7 +336,7 @@
 //     result += '\n';
 // }
 // console.log(result);
-'use strict';
+// 'use strict';
 
 // let numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
 // let personalMovieDB = {
@@ -953,17 +953,88 @@
 // }
 // console.log(findMaxNumber(1, 2, 3));
 
-function fib(number) {
-    let target = '';
-    if (typeof (number) != 'number') {
-        return `8`
-    }
-    for (let i = 0; i < number; i++) {
+// function fib(number) {
+//     if (typeof (number) != 'number' || number == 0) {
+//         return '8';
+//     }
+//     let target = '';
+//     let number1 = 0;
+//     let number2 = 1;
 
-        target += ' ' + `${i}`;
 
-    }
+//     for (let i = 0; i < number; i++) {
+//         if (i + 1 === number) {
+//             target += `${number1}`;
+//         } else {
+//             target += `${number1} `;
+//         }
 
-    return target;
+//         let number3 = number1 + number2;
+//         number1 = number2;
+//         number2 = number3;
+        
+          
+//     }
+//     return target;
+// }
+// console.log(fib(5));
+
+
+// 
+// const obj = new Object();
+// const options = {
+//     name: `test`,
+//     width: 1024,
+//     heidth: 1024,
+//     colors: {
+//         border: `black`,
+//         bg: `red`
+//     },
+//     makeTest: function () {
+//         console.log(`Test`);
+//     }
+// };
+// options.makeTest();
+
+
+// const { border, bg } = options.colors;
+// console.log(border);
+
+
+// console.log(Object.keys(options).length);
+
+// 'use strict';
+const arr = [1, 2, 3, 6, 8, 10];
+arr.sort(compareNum);
+console.log(arr);
+// // arr[99] = 0;
+// // console.log(arr.length);
+// // console.log(arr);
+// arr.forEach(function (item, i, arr) {
+//     console.log(`${i}: ${item} внутри массива ${arr}`);
+// });
+
+
+// // arr.pop();
+// // arr.push(12);
+
+// // console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+
+// const str = prompt('', '');
+// const products = str.split(', ');
+// products.sort();
+// console.log(products.join(`; `));
+
+
+function compareNum(a, b) {
+    return a - b;
 }
-console.log(fib(4));
